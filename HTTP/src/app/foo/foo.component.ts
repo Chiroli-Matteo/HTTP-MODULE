@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-
-import {Foo} from './foo.model';
+import {Foo} from './foo.model.ts';
 
 @Component({
-  selector: 'app-foo-component',
-  templateUrl: './foo-component.component.html',
-  styleUrls: ['./foo-component.component.css']
+  selector: 'app-foo',
+  templateUrl: './foo.component.html',
+  styleUrls: ['./foo.component.css']
 })
 export class FooComponentComponent implements OnInit {
 
@@ -49,7 +48,7 @@ export class FooComponentComponent implements OnInit {
     this.http
       .post('https://jsonplaceholder.typicode.com/posts',
         JSON.stringify({ 
-          body: 'far',
+          body: 'bar',
           title: 'foo',
           userId: 1
         })

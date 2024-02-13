@@ -2,9 +2,13 @@
 <button type="button" (click)="makeRequest()">Make Request</button>
 <div *ngIf="loading">loading...</div>
 <pre>{{data | json}}</pre>
+
 <hr>
+
 <button type="button" (click)="makeCompactPost()">Make Post</button>
+
 <hr>
+
 <button type="button" (click)="makeTypedRequest()">Make typed request</button>
 
 <!--Uso un ciclo for per scandire tutta la lista di articoli-->
